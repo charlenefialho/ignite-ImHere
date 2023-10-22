@@ -4,7 +4,8 @@ export const styles = StyleSheet.create({
   container:{
     flex: 1,
     backgroundColor: '#131016',
-    padding: 24
+    padding: 24,
+    marginBottom: 10
   },
   eventName:{
     color: '#FDFCFE',
@@ -35,13 +36,13 @@ export const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   buttonText:{
-    
+    color: '#FFF',
+    fontSize: 24
   },
   form:{
     width:'100%',
     flexDirection:'row',
     marginTop: 36,
     marginBottom: 42,
-    
   }
 })
