@@ -4,7 +4,7 @@ import { Alert, FlatList, Text, TextInput, TouchableOpacity, View } from "react-
 import { Participant } from "@components/Participant/";
 import { styles } from "./styles";
 
-export function Home() {
+export default function Home() {
   const [participants, setParticipants] = useState<string[]>([]);
   const [participantName, setParticipantName] = useState('');
   
@@ -21,7 +21,7 @@ export function Home() {
     Alert.alert("Remover", `Remover o participante ${name}?`, [
       {
         text: 'Sim',
-        onPress: () => Alert.alert("Deletado!")
+        onPress: () => setParticipants(preventState => preventState.filter(participant => participant !== name))
       },
       {
         text: 'Não',
